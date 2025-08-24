@@ -61,44 +61,57 @@ body {
 
 /* Projects Section */
 #projects {
-  padding: 60px 20px;
+  padding: 80px 20px;
   background: #fff;
   text-align: center;
 }
 
 #projects h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
 }
 
+/* Grid layout for projects */
+#projects .projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Project tile */
 .project-tile {
-  display: inline-block;
-  margin: 15px;
-  width: 300px;
   background: #fafafa;
   border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  width: 280px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .project-tile img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
   display: block;
+  margin: 0 auto 0.5rem;
 }
 
 .project-tile p {
-  padding: 10px;
-  font-size: 1.1rem;
   font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
   color: #333;
+}
+
+/* Special case: multiple images inside one project */
+.project-tile.multiple img {
+  margin-bottom: 0.5rem;
 }
 
 /* Footer */
@@ -107,6 +120,7 @@ footer {
   padding: 20px;
   background: #222;
   color: #fff;
+  margin-top: 40px;
 }
 
 /* Media Queries */
